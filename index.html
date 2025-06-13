@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Credits</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    }
 
+    .background {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://cdn.discordapp.com/attachments/1306324563134517360/1381424482215919616/IMG_3279.png?ex=684d660e&is=684c148e&hm=f3595afff97c623985460d635843eb9290f826268f30ff0642a0a6d037718165') no-repeat center center fixed;
+      background-size: cover;
+      filter: blur(8px) brightness(0.6);
+      z-index: -2;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 5vh;
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 4rem;
+      color: white;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                   0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    h1 span {
+      display: inline-block;
+      animation: jiggle 1s infinite ease-in-out alternate;
+    }
+
+    /* Unsynced jiggle delays for each letter */
+    h1 span:nth-child(1) { animation-delay: 0s; }
+    h1 span:nth-child(2) { animation-delay: 0.2s; }
+    h1 span:nth-child(3) { animation-delay: 0.4s; }
+    h1 span:nth-child(4) { animation-delay: 0.1s; }
+    h1 span:nth-child(5) { animation-delay: 0.3s; }
+    h1 span:nth-child(6) { animation-delay: 0.5s; }
+    h1 span:nth-child(7) { animation-delay: 0.15s; }
+
+    @keyframes jiggle {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-2px) rotate(-2deg); }
+      100% { transform: translateY(2px) rotate(2deg); }
+    }
+
+    .credits {
+      margin-top: 50px;
+      display: flex;
+      gap: 60px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .credit-item {
+      text-align: center;
+      color: white;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                   0 0 20px rgba(255, 255, 255, 0.3);
+    }
+
+    .credit-item img {
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+      margin-bottom: 10px;
+    }
+
+    .credit-item p {
+      font-weight: bold;
+      font-size: 1.2rem;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="overlay">
+    <h1>
+      <span>C</span><span>R</span><span>E</span><span>D</span><span>I</span><span>T</span><span>S</span>
+    </h1>
+    <div class="credits">
+      <div class="credit-item">
+        <img src="https://cdn.discordapp.com/attachments/1382837399213707285/1383185865890861087/THGorillaaPFP.png?ex=684ddfb8&is=684c8e38&hm=2c7463aee1b5a9994cdbef8ee09421f0c1ac6b24c6c7688bb7574749e20be541&" alt="TH GORILLAA">
+        <p>TH GORILLAA - OWNER</p>
+      </div>
+      <div class="credit-item">
+        <img src="https://cdn.discordapp.com/avatars/681684938671783941/42694d8f227fbb41f0b68e3cfe7414ac.png?size=512" alt="HAMSTERTENDO">
+        <p>HAMSTERTENDO - CO-OWNER</p>
+      </div>
+      <div class="credit-item">
+        <img src="https://via.placeholder.com/150x150?text=EXOTIC" alt="EXOTIC">
+        <p>EXOTIC - Website maker and W admin</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
